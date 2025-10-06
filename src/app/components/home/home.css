@@ -1,0 +1,208 @@
+/* Header con imagen de fondo */
+.header-bg {
+  width: 100%;
+  min-height: 800px; /* altura mínima del banner */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* navbar arriba */
+  padding: 2rem 2rem;
+  position: relative;
+}
+
+/* Navbar con fondo blanco */
+.nav-links {
+  width: 90%;
+  display: flex;
+  justify-content: space-between; /* logo izquierda, enlaces derecha */
+  align-items: center;
+  gap: 1rem;
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* sombra sutil */
+  position: absolute;
+  top: 30px; /* distancia desde arriba del banner */
+}
+
+.bot{
+    padding: 4px;
+    background-color: #C9A66B;
+}
+
+.bot01 {
+  margin-top: 150px;
+  margin-right: 30px;
+  padding: 10px 20px;
+  margin-right: 10px;
+  background-color: #C9A66B;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+/* Logo */
+.logo img {
+  height: 60px;
+  width: auto;
+}
+
+/* Contenedor de enlaces */
+.nav-items {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Enlaces */
+.nav-items a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 6px;
+  transition: all 0.3s;
+}
+
+.nav-items a:hover,
+.nav-items a.active {
+  color: #C9A66B;
+}
+
+/* Contenido principal */
+.main-content {
+  margin-top: 200px; /* espacio debajo de la navbar */
+  text-align: center;
+  color: #fff; /* si quieres el texto sobre la imagen */
+}
+
+
+.texto01{
+    font-size: 90px;
+    text-align: left;
+}
+
+.texto02{
+    font-size: 30px;
+    text-align: center;
+    margin: -50px;
+}
+
+.contenedor01{
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 70%;
+    height: auto;
+}
+
+.contenedor02{
+    background-color: #EADBC8;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+
+}
+
+.contenedor02_1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tarj{
+    margin-top: 40px;
+    margin-right: 50px;
+    width: 460px;
+    height: 490px;
+    border-radius: 20px;
+    background-color: #fff;
+    border: 2px solid #6B7A52;
+}
+
+.tarj div{
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #6B7A52;
+}
+
+.tarj h3{
+    margin-left: 190px;
+    font-size: 70px;
+    margin-top: 40px;
+    margin-bottom: 0px;
+
+}
+
+.tarj img{
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 100px;
+    height: 100px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .header-bg {
+    min-height: auto;
+    padding: 1rem;
+  }
+
+  .main-content {
+    margin-top: 100px; /* menos espacio para móviles */
+    padding: 0 1rem;
+  }
+
+  .texto01 {
+    font-size: 40px; /* reducir tamaño de texto */
+    text-align: center;
+  }
+
+  .texto02 {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  .bot01 {
+    margin-top: 20px;
+    margin-right: 0;
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+
+  .contenedor01 {
+    width: 90%;
+  }
+
+  .contenedor02_1 {
+    flex-wrap: wrap; /* permite que las tarjetas se muevan a nueva línea */
+    gap: 20px;
+    padding: 1rem;
+  }
+
+  .tarj {
+    width: 100%; /* tarjetas ocupan todo el ancho */
+    margin-right: 0;
+    margin-top: 20px;
+    height: auto; /* altura automática */
+  }
+
+  .tarj h3 {
+    margin-left: 0;
+    font-size: 40px;
+  }
+
+  .tarj img {
+    width: 80px;
+    height: 80px;
+    margin-left: 0;
+  }
+}
