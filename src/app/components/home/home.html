@@ -1,328 +1,181 @@
-<!-- Encabezado -->
-<div class="header-bg" [style.background-image]="'url(' + banner + ')'">
-  <nav class="nav-links">
-    <a routerLink="/" class="logo">
-      <img src="assets/images/LOGO_ArtesanoMadera_Sinfondo.png" alt="Logo Artesano Madera">
-    </a>
-    <div class="nav-items">
-      <a routerLink="/" routerLinkActive="active">Inicio</a>
-      <a routerLink="/products" routerLinkActive="active">Productos</a>
-      <a routerLink="/about" routerLinkActive="active">Nosotros</a>
-      <a routerLink="/contact" routerLinkActive="active">Contacto</a>
-      <a routerLink="/cart" routerLinkActive="active">Carrito</a>
-      <a routerLink="/login" routerLinkActive="active" class="bot">Iniciar Sesión</a>
-    </div>
-  </nav>
 
-  <main class="main-content">
-    <div class="contenedor01">   
-        <h1 class="texto01">Estilo y calidad en carpintería</h1>
-        <p class="texto02">Muebles diseñados para inspirar confianza y elegancia.</p>
-    </div>
-    <div>
-        <a routerLink="/about" class="bot01">Comprar</a>
-        <a routerLink="/products" class="bot01">Ver Productos</a>
-    </div>
+<!-- Header reutilizable -->
+<app-header></app-header>
 
-  </main>
-</div>
 <!-- Cuerpo -->
 <div class="contenedor02">
-
-    <main>
-        <div class="contenedor02_1">   
-            <div class="tarj">
-
-                <div style="display: flex; flex-direction: row;">
-                    <img src="assets/images/icons/icono_001.png" alt="icono_001">
-                    <h3>
-                        01
-                    </h3>
-                    
-                </div>
-                <div><h2>Diseño Exclusivo</h2></div>
-                <div>
-                    <p>
-                        _______________________
-                    </p>
-                    <p> 
-                        Cada proyecto refleja la armonía entre tradición y modernidad. 
-                        Nuestras piezas de carpintería están pensadas para integrarse 
-                        con elegancia en cualquier espacio, resaltando la belleza natural de la madera.
-                    </p>
-                </div>
-
-            </div>
-            <div class="tarj">
-                
-                <div style="display: flex; flex-direction: row;">
-                    <img src="assets/images/icons/icono_002.png" alt="icono_001">
-                    <h3>
-                        02
-                    </h3>
-                    
-                </div>
-                <div><h2>Calidez y Durabilidad</h2></div>
-                <div>
-                    <p>
-                        _______________________
-                    </p>
-                    <p> 
-                        El uso de materiales seleccionados y procesos de fabricación 
-                        rigurosos garantizan muebles resistentes, con acabados que 
-                        transmiten confort y sofisticación.
-                    </p>
-                </div>
-
-            </div>
-            <div class="tarj">
-                
-                <div style="display: flex; flex-direction: row;">
-                    <img src="assets/images/icons/icono_003.png" alt="icono_001">
-                    <h3>
-                        03
-                    </h3>
-                    
-                </div>
-                <div><h2>Detalles que Inspiran</h2></div>
-                <div>
-                    <p>
-                        _______________________
-                    </p>
-                    <p> 
-                        Nos enfocamos en la precisión y el arte de la carpintería, 
-                        logrando piezas que no solo cumplen una función, sino que 
-                        también elevan la estética y el valor de su entorno.
-                    </p>
-                </div>
-
-            </div>
+  <main>
+    <div class="contenedor02_1">   
+      <div class="tarj">
+        <div style="display: flex; flex-direction: row;">
+          <img src="assets/images/icons/icono_001.png" alt="icono_001">
+          <h3>01</h3>
         </div>
-        
-    </main>
-</div>
+        <div><h2>Diseño Exclusivo</h2></div>
+        <div>
+          <p>_______________________</p>
+          <p>
+            Cada proyecto refleja la armonía entre tradición y modernidad. 
+            Nuestras piezas de carpintería están pensadas para integrarse 
+            con elegancia en cualquier espacio, resaltando la belleza natural de la madera.
+          </p>
+        </div>
+      </div>
+
+      <div class="tarj">
+        <div style="display: flex; flex-direction: row;">
+          <img src="assets/images/icons/icono_002.png" alt="icono_001">
+          <h3>02</h3>
+        </div>
+        <div><h2>Calidez y Durabilidad</h2></div>
+        <div>
+          <p>_______________________</p>
+          <p>
+            El uso de materiales seleccionados y procesos de fabricación 
+            rigurosos garantizan muebles resistentes, con acabados que 
+            transmiten confort y sofisticación.
+          </p>
+        </div>
+      </div>
+
+      <div class="tarj">
+        <div style="display: flex; flex-direction: row;">
+          <img src="assets/images/icons/icono_003.png" alt="icono_001">
+          <h3>03</h3>
+        </div>
+        <div><h2>Detalles que Inspiran</h2></div>
+        <div>
+          <p>_______________________</p>
+          <p>
+            Nos enfocamos en la precisión y el arte de la carpintería, 
+            logrando piezas que no solo cumplen una función, sino que 
+            también elevan la estética y el valor de su entorno.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
 
 
+
+  <!-- Productos destacados -->
 <div class="productos-destacados">
-    <h2>Productos Destacados</h2>
-  
-    <div class="grid-productos">
-      <div class="producto-card">
-        <img src="assets/images/productos/producto_01.jpg" alt="Mesa de comedor">
-        <div class="info-producto">
-          <p><strong>Nombre:</strong> Mesa de Comedor</p>
-          <p><strong>Precio:</strong> $147.51</p>
-          <p><strong>Descripción:</strong> Mesa de madera, diseño moderno, perfecta para tu comedor.</p>
-          <button class="btn-comprar">Comprar</button>
-        </div>
+  <h2>Productos Destacados</h2>
+  <div class="grid-productos">
+    <div class="producto-card">
+      <img src="assets/images/productos/producto_01.jpg" alt="Mesa de comedor">
+      <div class="info-producto">
+        <p><strong>Nombre:</strong> Mesa de Comedor</p>
+        <p><strong>Precio:</strong> $147.51</p>
+        <p><strong>Descripción:</strong> Mesa de madera, diseño moderno, perfecta para tu comedor.</p>
+        <button class="btn-comprar">Comprar</button>
       </div>
-  
-      <div class="producto-card">
-        <img src="assets/images/productos/producto_01.jpg" alt="Cámara de seguridad">
-        <div class="info-producto">
-          <p><strong>Nombre:</strong> DS-2CD2026G2-IU/SL</p>
-          <p><strong>Precio:</strong> $314.00</p>
-          <p><strong>Descripción:</strong> 2MP, AcuSense, luz estroboscópica y micrófono incorporado, IP67.</p>
-          <button class="btn-comprar">Comprar</button>
-        </div>
-      </div>
-  
-      <div class="producto-card">
-        <img src="assets/images/productos/producto_01.jpg" alt="Cámara de seguridad">
-        <div class="info-producto">
-          <p><strong>Nombre:</strong> DS-2CD2483G2-I</p>
-          <p><strong>Precio:</strong> $145.34</p>
-          <p><strong>Descripción:</strong> 8MP, diseño compacto, micrófono incorporado, lente fija 2.8mm.</p>
-          <button class="btn-comprar">Comprar</button>
-        </div>
-      </div>
-  
-      <div class="producto-card">
-        <img src="assets/images/productos/producto_01.jpg" alt="Cámara panorámica">
-        <div class="info-producto">
-          <p><strong>Nombre:</strong> DS-2CD2366G2P-ISU</p>
-          <p><strong>Precio:</strong> $345.35</p>
-          <p><strong>Descripción:</strong> 6MP Panorámica, micrófono y sirena incorporados, IP67.</p>
-          <button class="btn-comprar">Comprar</button>
-        </div>
-      </div>
+    </div>
 
-      <div class="producto-card">
-        <img src="assets/images/productos/producto_01.jpg" alt="Cámara panorámica">
-        <div class="info-producto">
-          <p><strong>Nombre:</strong> DS-2CD2366G2P-ISU</p>
-          <p><strong>Precio:</strong> $345.35</p>
-          <p><strong>Descripción:</strong> 6MP Panorámica, micrófono y sirena incorporados, IP67.</p>
-          <button class="btn-comprar">Comprar</button>
-        </div>
+    <div class="producto-card">
+      <img src="assets/images/productos/producto_01.jpg" alt="Cámara de seguridad">
+      <div class="info-producto">
+        <p><strong>Nombre:</strong> DS-2CD2026G2-IU/SL</p>
+        <p><strong>Precio:</strong> $314.00</p>
+        <p><strong>Descripción:</strong> 2MP, AcuSense, luz estroboscópica y micrófono incorporado, IP67.</p>
+        <button class="btn-comprar">Comprar</button>
       </div>
-      
-      <div class="producto-card">
-        <img src="assets/images/productos/producto_01.jpg" alt="Cámara panorámica">
-        <div class="info-producto">
-          <p><strong>Nombre:</strong> DS-2CD2366G2P-ISU</p>
-          <p><strong>Precio:</strong> $345.35</p>
-          <p><strong>Descripción:</strong> 6MP Panorámica, micrófono y sirena incorporados, IP67.</p>
-          <button class="btn-comprar">Comprar</button>
-        </div>
+    </div>
+
+    <div class="producto-card">
+      <img src="assets/images/productos/producto_01.jpg" alt="Cámara de seguridad">
+      <div class="info-producto">
+        <p><strong>Nombre:</strong> DS-2CD2483G2-I</p>
+        <p><strong>Precio:</strong> $145.34</p>
+        <p><strong>Descripción:</strong> 8MP, diseño compacto, micrófono incorporado, lente fija 2.8mm.</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+    </div>
+
+    <div class="producto-card">
+      <img src="assets/images/productos/producto_01.jpg" alt="Cámara panorámica">
+      <div class="info-producto">
+        <p><strong>Nombre:</strong> DS-2CD2366G2P-ISU</p>
+        <p><strong>Precio:</strong> $345.35</p>
+        <p><strong>Descripción:</strong> 6MP Panorámica, micrófono y sirena incorporados, IP67.</p>
+        <button class="btn-comprar">Comprar</button>
       </div>
     </div>
   </div>
-  
+</div>
 
+<!-- Contacto -->
+<div class="main-contenido">
+  <div class="contacto">
+    <h2>Contáctanos</h2>
+    <p>Comuníquese con nosotros para cualquier consulta o asistencia; ¡estamos aquí para ayudarlo!</p>
 
-    <!-- 🔹 Contenedor general -->
-    <div class="main-contenido">
-  
-      <!-- 🟢 Sección de Contacto -->
-      <div class="contacto">
-        <h2>Contáctanos</h2>
-        <p>Comuníquese con nosotros para cualquier consulta o asistencia; ¡estamos aquí para ayudarlo!</p>
-  
-        <div class="contacto-contenido">
-          <form class="form-contacto">
-            <input type="text" placeholder="Nombre *" required>
-            <input type="email" placeholder="Email" required>
-            <input type="tel" placeholder="Número de celular *" required>
-  
-            <select required>
-              <option value="">¿Cómo nos encontraste?</option>
-              <option value="redes">Redes sociales</option>
-              <option value="web">Búsqueda web</option>
-              <option value="recomendacion">Recomendación</option>
-            </select>
-  
-            <button type="submit">ENVIAR</button>
-          </form>
-  
-          <div class="mapa">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d9225.979167339825!2d-71.
-                        93675398586907!3d-13.532743727272813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!
-                        1ses!2spe!4v1761004204773!5m2!1ses!2spe" width="600" height="450" style="border:0;" 
-                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-          </div>
-        </div>
-  
-        <div class="info-contacto">
-          <p>📞 Celular: 05 5432 1234</p>
-          <p>📠 Fax: 05 5432 1234</p>
-          <p>✉️ Email: info@amarcc.com.au</p>
-        </div>
-      </div>
-  
-      <!-- 🟤 Sección de Testimonios -->
-      <div class="testimonios">
-        <h2>Testimonios</h2>
-        <p>Lo que nuestros clientes dicen de nosotros.</p>
-  
-        <div class="testimonios-contenedor">
-          <article class="testimonio">
-            <img src="assets/images/testimonios/testimonio_01.png" alt="James Pattinson">
-            <h3>James Pattinson</h3>
-            <p class="estrellas">⭐⭐⭐⭐☆</p>
-            <p>Quedé satisfecho con el servicio de la carpintería. Fueron profesionales y puntuales, y los muebles quedaron muy bien, por eso los elegí.</p>
-          </article>
-  
-          <article class="testimonio">
-            <img src="assets/images/testimonios/testimonio_01.png" alt="Greg Stuart">
-            <h3>Greg Stuart</h3>
-            <p class="estrellas">⭐⭐⭐⭐⭐</p>
-            <p>¡Excelente servicio! La carpintería se encargó de todo con mucho cuidado, desde el diseño hasta la instalación. Superaron todas mis expectativas.</p>
-          </article>
-  
-          <article class="testimonio">
-            <img src="assets/images/testimonios/testimonio_01.png" alt="Trevor Mitchell">
-            <h3>Trevor Mitchell</h3>
-            <p class="estrellas">⭐⭐⭐⭐☆</p>
-            <p>El servicio fue bueno, pero hubo pequeños retrasos en la entrega. Aun así, la atención fue amable y los muebles cumplen su función.</p>
-          </article>
+    <div class="contacto-contenido">
+      <form class="form-contacto">
+        <input type="text" placeholder="Nombre *" required>
+        <input type="email" placeholder="Email" required>
+        <input type="tel" placeholder="Número de celular *" required>
 
-          <article class="testimonio">
-            <img src="assets/images/testimonios/testimonio_01.png" alt="Trevor Mitchell">
-            <h3>Trevor Mitchell</h3>
-            <p class="estrellas">⭐⭐⭐☆☆</p>
-            <p>El servicio fue bueno, pero hubo pequeños retrasos en la entrega. Aun así, la atención fue amable y los muebles cumplen su función.</p>
-          </article>
-        </div>
-      </div>
-  
-    </div>
-  
+        <select required>
+          <option value="">¿Cómo nos encontraste?</option>
+          <option value="redes">Redes sociales</option>
+          <option value="web">Búsqueda web</option>
+          <option value="recomendacion">Recomendación</option>
+        </select>
 
+        <button type="submit">ENVIAR</button>
+      </form>
 
-
-<!-- Footer -->
-<footer class="footer-modern">
-    <div class="footer-top">
-      <div class="footer-logo-text">
-        <img src="assets/images/LOGO_ArtesanoMadera_Sinfondo.png" alt="Logo Artesano Madera" class="footer-logo">
-        <p>
-          Somos una carpintería especializada en crear muebles personalizados y de alta calidad, 
-          combinando artesanía tradicional con diseños modernos. Cada pieza se fabrica con maderas 
-          premium, cuidando cada detalle para ofrecer estilo, durabilidad y funcionalidad a tu hogar o negocio.
-        </p>
+      <div class="mapa">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d9225.979167339825!2d-71.93675398586907!3d-13.532743727272813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2spe!4v1761004204773!5m2!1ses!2spe"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
     </div>
-  
-    <hr class="footer-divider">
-  
-    <div class="footer-content">
-      <div class="footer-column">
-        <h3>Producto</h3>
-        <ul>
-          <li><a href="#">Características</a></li>
-          <li><a href="#">Precios</a></li>
-        </ul>
-      </div>
-  
-      <div class="footer-column">
-        <h3>Empresa</h3>
-        <ul>
-          <li><a href="#">Acerca de</a></li>
-          <li><a href="#">Contáctanos</a></li>
-        </ul>
-      </div>
-  
-      <div class="footer-column">
-        <h3>Soporte</h3>
-        <ul>
-          <li><a href="#">Centro de ayuda</a></li>
-          <li><a href="#">Informar de un error</a></li>
-          <li><a href="#">Soporte por chat</a></li>
-        </ul>
-      </div>
-  
-      <div class="footer-column newsletter">
-        <h3>Suscríbete</h3>
-        <p>
-          Recibe noticias y promociones exclusivas sobre nuevos diseños y productos hechos con pasión artesanal.
-        </p>
-        <form>
-          <input type="email" placeholder="Ingresa tu email" required>
-          <button type="submit">Suscríbete</button>
-        </form>
-      </div>
-    </div>
-  
-    <hr class="footer-divider">
-  
-    <div class="footer-bottom">
-      <p>Copyright © 2025 | All Rights Reserved</p>
-      <div class="footer-socials">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
-        <a href="#"><i> <img src="assets/images/icons/icono_yt.png" alt=""></i></a>
-        <a href="#"><i> <img src="assets/images/icons/icono_tw.png" alt=""></i></a>
-        <a href="#"><i> <img src="assets/images/icons/icono_ld.png" alt=""></i></a>
-        <a href="#"><i> <img src="assets/images/icons/icono_ig.png" alt=""></i></a>
-        <a href="#"><i> <img src="assets/images/icons/icono_fb.png" alt=""></i></a>
-      </div>
-    </div>
-  </footer>
-  
-  
 
+    <div class="info-contacto">
+      <p>📞 Celular: 05 5432 1234</p>
+      <p>📠 Fax: 05 5432 1234</p>
+      <p>✉️ Email: info@amarcc.com.au</p>
+    </div>
+  </div>
+
+  <!-- Testimonios -->
+  <div class="testimonios">
+    <h2>Testimonios</h2>
+    <p>Lo que nuestros clientes dicen de nosotros.</p>
+
+    <div class="testimonios-contenedor">
+      <article class="testimonio">
+        <img src="assets/images/testimonios/testimonio_01.png" alt="James Pattinson">
+        <h3>James Pattinson</h3>
+        <p class="estrellas">⭐⭐⭐⭐☆</p>
+        <p>Quedé satisfecho con el servicio de la carpintería...</p>
+      </article>
+
+      <article class="testimonio">
+        <img src="assets/images/testimonios/testimonio_01.png" alt="Greg Stuart">
+        <h3>Greg Stuart</h3>
+        <p class="estrellas">⭐⭐⭐⭐⭐</p>
+        <p>¡Excelente servicio! La carpintería se encargó de todo con mucho cuidado...</p>
+      </article>
+
+      <article class="testimonio">
+        <img src="assets/images/testimonios/testimonio_01.png" alt="Trevor Mitchell">
+        <h3>Trevor Mitchell</h3>
+        <p class="estrellas">⭐⭐⭐☆☆</p>
+        <p>El servicio fue bueno, aunque hubo pequeños retrasos...</p>
+      </article>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+
+
+<!-- Footer reutilizable -->
+<app-footer></app-footer>
