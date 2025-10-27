@@ -1,1 +1,13 @@
-<p>login works!</p>
+
+<div class="login">
+  <img src="assets/imglg/1.png" id="cajah" alt="Caja animada">
+  <form class="formulario" (submit)="onLogin($event)">
+    <label>Usuario</label>
+    <input type="text" id="input-usuario" placeholder="ejemplo@gmail.com" autocomplete="off" />
+
+    <label>Contraseña</label>
+    <input type="password" id="input-clave" placeholder="***" />
+
+    <button type="submit">Login</button>
+  </form>
+</div>

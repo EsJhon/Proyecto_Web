@@ -1,3 +1,32 @@
+.cart-header {
+  display: flex;
+  justify-content: space-around;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.cart-step {
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+  background: #2b2b2b;
+  font-weight: 600;
+  color: #bbb;
+}
+
+.cart-step.active {
+  background-color: red;
+  color: #fff;
+}
+
+.cart-step.current {
+  background-color: #ffd60a;
+  color: #000;
+}
+
+
 .delivery-container {
   background-color: #111;
   color: #fff;

@@ -1,3 +1,44 @@
+
+
+.cart-header, .progress-bar {
+  display: flex;
+  justify-content: space-around;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  padding: 0.5rem 0;
+}
+
+.cart-step, .step {
+  flex: 1;
+  text-align: center;
+  padding: 1rem 0;
+  background: #2b2b2b; /* Pendientes */
+  font-weight: 600;
+  color: #bbb; /* Pendientes */
+}
+
+/* Paso completado */
+.cart-step.active, .step.active {
+  background-color: red; /* Mi Carrito */
+  color: #fff;
+}
+
+/* Paso actual según la página */
+.cart-step.current, .step.current {
+  /* Puedes cambiar el color según la página */
+  background-color: #FFD700; /* Delivery amarillo */
+  color: #000;
+}
+
+/* Paso siguiente (Pago) */
+.cart-step.next, .step.next {
+  background-color: #00ff7f; /* Verde */
+  color: #000;
+}
+
+
 .payment-container {
   display: flex;
   justify-content: space-between;
