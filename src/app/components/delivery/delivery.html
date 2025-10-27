@@ -1,0 +1,114 @@
+<div class="delivery-container">
+  <!-- 🟨 Barra de progreso -->
+  <div class="progress-bar">
+    <div class="step active">Mi Carrito</div>
+    <div class="step current">Delivery</div>
+    <div class="step">Pago</div>
+    <div class="step">Confirmación</div>
+  </div>
+
+  <div class="delivery-content">
+    <!-- 🧾 Información de envío -->
+    <div class="delivery-form">
+      <h2>Información de envío</h2>
+
+      <label>Título de la dirección</label>
+      <input type="text" placeholder="Address Title" />
+
+      <label>Nombre Completo</label>
+      <div class="input-row">
+        <input type="text" placeholder="First Name" />
+        <input type="text" placeholder="Middle Name" />
+        <input type="text" placeholder="Last Name" />
+      </div>
+
+      <label>Tu Dirección</label>
+      <input type="text" placeholder="Permanent Address" />
+
+      <div class="input-row">
+        <div>
+          <label>Código Zip</label>
+          <input type="text" placeholder="30531" />
+        </div>
+        <div>
+          <label>País</label>
+          <select>
+            <option>Perú</option>
+            <option>Chile</option>
+            <option>Argentina</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="input-row">
+        <div>
+          <label>Ciudad</label>
+          <select>
+            <option>Cusco</option>
+            <option>Lima</option>
+            <option>Arequipa</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="input-row">
+        <div>
+          <label>Número de Celular</label>
+          <input type="text" placeholder="+51 999 999 999" />
+        </div>
+        <div>
+          <label>Teléfono</label>
+          <input type="text" placeholder="(01) 999-9999" />
+        </div>
+      </div>
+
+      <label>Tiempo de Entrega</label>
+      <div class="radio-group">
+        <label><input type="radio" name="time" /> De 6am a 12pm</label>
+        <label><input type="radio" name="time" /> De 12pm a 4pm</label>
+        <label><input type="radio" name="time" /> De 4pm a 7pm</label>
+      </div>
+
+      <button class="back-btn">Volver al carrito</button>
+    </div>
+
+    <!-- 📦 Resumen -->
+    <div class="delivery-summary">
+      <h2>Resumen</h2>
+      <div class="summary-item">
+        <img src="assets/images/productos/producto_01.jpg" alt="Mesa de comedor" />
+        <div class="details">
+          <h4>Mesa de Comedor</h4>
+          <p>Cantidad: 1</p>
+          <span class="price">S/.147.51</span>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="price-info">
+        <p>Subtotal: <span>S/.147.51</span></p>
+        <p>Envío: <span class="free">Free</span></p>
+        <p>Descuento: <span class="discount">- S/.7.51</span></p>
+        <p class="total">Total: <span>S/.140</span></p>
+      </div>
+
+      <h3>Shipping</h3>
+      <div class="shipping-options">
+        <label>
+          <input type="radio" name="shipping" checked />
+          <span>Standard Shipping</span>
+          <p>Entrega en 3 a 6 días laborales (gratis).</p>
+        </label>
+
+        <label>
+          <input type="radio" name="shipping" />
+          <span>Express Shipping</span>
+          <p>Entrega en 1 a 2 días laborales (cargo adicional S/.30).</p>
+        </label>
+      </div>
+
+      <button class="verify-btn">Verificar ➜</button>
+    </div>
+  </div>
+</div>

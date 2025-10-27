@@ -1,0 +1,29 @@
+<!-- Encabezado -->
+<header class="header-bg" [style.background-image]="'url(' + banner + ')'">
+  <nav class="nav-links">
+    <a routerLink="/" class="logo">
+      <img src="assets/images/LOGO_ArtesanoMadera_Sinfondo.png" alt="Logo Artesano Madera">
+    </a>
+
+    <div class="nav-items">
+      <a routerLink="/" routerLinkActive="active">Inicio</a>
+      <a routerLink="/products" routerLinkActive="active">Productos</a>
+      <a routerLink="/about" routerLinkActive="active">Nosotros</a>
+      <a routerLink="/contact" routerLinkActive="active">Contacto</a>
+      <a routerLink="/cart" routerLinkActive="active">Carrito</a>
+      <a routerLink="/login" routerLinkActive="active" class="bot">Iniciar Sesión</a>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <div class="contenedor01">   
+      <h1 class="texto01">Estilo y calidad en carpintería</h1>
+      <p class="texto02">Muebles diseñados para inspirar confianza y elegancia.</p>
+    </div>
+
+    <div class="botones">
+      <a routerLink="/about" class="bot01">Comprar</a>
+      <a routerLink="/products" class="bot01">Ver Productos</a>
+    </div>
+  </main>
+</header>

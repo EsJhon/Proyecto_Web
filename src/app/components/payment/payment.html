@@ -1,0 +1,100 @@
+<div class="payment-container">
+  <!-- Sección izquierda: Información de pago -->
+  <div class="payment-info">
+    <h2>Información de pago</h2>
+    <hr />
+
+    <form>
+      <div class="form-group">
+        <label>Nombre del titular de la tarjeta</label>
+        <input type="text" placeholder="Tu Nombre" />
+      </div>
+
+      <div class="form-group">
+        <label>Número de tarjeta</label>
+        <input type="text" placeholder="Número de tarjeta" maxlength="16" />
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Mes de vencimiento</label>
+          <select>
+            <option>Mes</option>
+            <option>Enero</option>
+            <option>Febrero</option>
+            <option>Marzo</option>
+            <option>Abril</option>
+            <option>Mayo</option>
+            <option>Junio</option>
+            <option>Julio</option>
+            <option>Agosto</option>
+            <option>Setiembre</option>
+            <option>Octubre</option>
+            <option>Noviembre</option>
+            <option>Diciembre</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Año</label>
+          <select>
+            <option>Año</option>
+            <option>2025</option>
+            <option>2026</option>
+            <option>2027</option>
+            <option>2028</option>
+            <option>2029</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>CVV</label>
+        <input type="password" placeholder="CVV" maxlength="4" />
+      </div>
+
+      <div class="form-group">
+        <label>Otras opciones de pago</label>
+        <select>
+          <option>Seleccionar método</option>
+          <option>Transferencia bancaria</option>
+          <option>PayPal</option>
+          <option>Yape / Plin</option>
+        </select>
+      </div>
+
+      <button type="button" class="btn-volver">Volver a Direcciones</button>
+    </form>
+  </div>
+
+  <!-- Sección derecha: Resumen -->
+  <div class="payment-summary">
+    <h2>Resumen</h2>
+    <div class="summary-item">
+      <img src="assets/images/productos/producto_01.jpg" alt="Mesa de comedor" />
+      <div class="summary-details">
+        <p class="item-name">Mesa de Comedor</p>
+        <p class="item-category">Sub Categoría</p>
+        <p class="item-price">Cantidad: 1 — <span>S/.147.51</span></p>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="price-breakdown">
+      <p>Subtotal: <span>S/.147.51</span></p>
+      <p>Envío: <span class="free">Gratis</span></p>
+      <p>Descuento: <span class="discount">- S/.7.51</span></p>
+      <hr />
+      <p class="total">Total: <span>S/.140</span></p>
+    </div>
+
+    <div class="shipping-info">
+      <h3>Envío</h3>
+      <p>Envío estándar</p>
+      <small>Entrega estimada en 3 a 6 días hábiles. Gratis.</small>
+    </div>
+
+    <button class="btn-pagar">Pagar S/.140 →</button>
+  </div>
+</div>

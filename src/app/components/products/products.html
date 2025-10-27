@@ -1,0 +1,83 @@
+<app-header></app-header>
+
+<main>
+  <div class="container">
+
+    <aside class="filters">
+      <h3>Filtrar productos</h3>
+
+      <section class="filtro-categorias">
+        <h4>Categorías</h4>
+        <label><input type="radio" name="cat" /> Camas</label>
+        <label><input type="radio" name="cat" /> Estanterías</label>
+        <label><input type="radio" name="cat" /> Mesas</label>
+        <label><input type="radio" name="cat" /> Sillas</label>
+      </section>
+
+      <section class="filtro-subcat">
+        <h4>Sub Categorías</h4>
+        <div class="chips">
+          <span class="chip">diseño modular</span>
+          <span class="chip">HD</span>
+          <span class="chip">HXR</span>
+        </div>
+      </section>
+
+      <section class="filtro-estado">
+        <h4>Estado del producto</h4>
+        <button class="pill on-sale">On sale</button>
+        <button class="pill out">Out of Stock</button>
+        <div class="available">Available in Stock</div>
+      </section>
+    </aside>
+
+    <section class="grid-area">
+      <div class="top-controls">
+        <div class="count">30 Products</div>
+        <div class="sort">
+          Sort by
+          <select>
+            <option>Highest to Lowest</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <figure class="thumb">
+            <img src="assets/images/productos/producto_01.jpg" alt="Cama" />
+          </figure>
+          <div class="card-body">
+            <h3 class="title">Cama 2 Plazas</h3>
+            <p class="desc">Cama de madera</p>
+            <div class="price">S/ <strong>800</strong></div>
+            <div class="actions">
+              <button class="btn primary">Comprar ahora</button>
+              <button class="btn ghost">Añadir al carrito</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <figure class="thumb">
+            <img src="assets/images/productos/producto_01.jpg" alt="Estantería" />
+          </figure>
+          <div class="card-body">
+            <h3 class="title">Estantería detallada</h3>
+            <p class="desc">Hecha de madera sólida</p>
+            <div class="price">S/ <strong>600</strong></div>
+            <div class="actions">
+              <button class="btn primary">Comprar ahora</button>
+              <button class="btn ghost">Añadir al carrito</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <nav class="pagination">&lt; 1 2 3 ... 30 &gt;</nav>
+    </section>
+
+  </div>
+</main>
+
+<app-footer></app-footer>

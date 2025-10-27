@@ -1,0 +1,141 @@
+.delivery-container {
+  background-color: #111;
+  color: #fff;
+  padding: 2rem;
+  font-family: "Poppins", sans-serif;
+}
+
+/* 🟨 Barra de progreso */
+.progress-bar {
+  display: flex;
+  justify-content: space-around;
+  background-color: #1a1a1a;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+}
+
+.step {
+  padding: 0.8rem 1.5rem;
+  border-radius: 20px;
+  background-color: #333;
+  color: #aaa;
+}
+
+.step.active {
+  background-color: #e63946;
+  color: #fff;
+}
+
+.step.current {
+  background-color: #ffd60a;
+  color: #000;
+}
+
+/* 📋 Contenido principal */
+.delivery-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.delivery-form,
+.delivery-summary {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  padding: 2rem;
+  flex: 1;
+}
+
+/* FORMULARIO */
+.delivery-form input,
+.delivery-form select {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #444;
+  background-color: #222;
+  color: #fff;
+  border-radius: 6px;
+}
+
+.input-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.radio-group label {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.back-btn {
+  background-color: transparent;
+  color: #cba76b;
+  border: 1px solid #cba76b;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* RESUMEN */
+.delivery-summary img {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+}
+
+.summary-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.details h4 {
+  margin: 0;
+  color: #fff;
+}
+
+.price-info p {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-info .free {
+  color: #00ff80;
+}
+
+.price-info .discount {
+  color: #ff3b3b;
+}
+
+.price-info .total span {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #cba76b;
+}
+
+.shipping-options label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.shipping-options span {
+  font-weight: bold;
+  color: #ffd60a;
+}
+
+.verify-btn {
+  background-color: #cba76b;
+  color: #000;
+  border: none;
+  padding: 1rem 2rem;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.verify-btn:hover {
+  background-color: #e6c17d;
+}
