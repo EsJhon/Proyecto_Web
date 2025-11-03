@@ -1,13 +1,35 @@
+<div class="login-container">
+  <div class="login-image">
+    <img [src]="currentImage" alt="Caja animada" #cajaImage>
+  </div>
+  
+  <form class="login-form" (ngSubmit)="onLogin()">
+    <div class="form-group">
+      <label for="usuario">Usuario</label>
+      <input 
+        type="text" 
+        id="usuario" 
+        [(ngModel)]="usuario" 
+        name="usuario"
+        placeholder="ejemplo@gmail.com" 
+        autocomplete="off"
+        (focus)="onInputFocus('usuario')"
+        (blur)="onInputBlur()"
+        (keyup)="onUsuarioKeyup()">
+    </div>
 
-<div class="login">
-  <img src="assets/imglg/1.png" id="cajah" alt="Caja animada">
-  <form class="formulario" (submit)="onLogin($event)">
-    <label>Usuario</label>
-    <input type="text" id="input-usuario" placeholder="ejemplo@gmail.com" autocomplete="off" />
+    <div class="form-group">
+      <label for="clave">Contraseña</label>
+      <input 
+        type="password" 
+        id="clave" 
+        [(ngModel)]="clave" 
+        name="clave"
+        placeholder="***"
+        (focus)="onInputFocus('clave')"
+        (blur)="onInputBlur()">
+    </div>
 
-    <label>Contraseña</label>
-    <input type="password" id="input-clave" placeholder="***" />
-
-    <button type="submit">Login</button>
+    <button type="submit" class="login-btn">Login</button>
   </form>
 </div>

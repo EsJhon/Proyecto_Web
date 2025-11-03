@@ -3,16 +3,17 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  standalone: true,
   templateUrl: './header.html',
-  styleUrl: './header.css',
+  styleUrls: ['./header.css']  // 👈 importante: plural
 })
 export class Header {
-  banner = 'assets/images/banners/img_001.jpg'; // 👈 define el banner para evitar el error
-  
+  banner = 'assets/images/banners/img_001.jpg';
+
   constructor(private router: Router) {}
 
-  irA(ruta: string) {
-    this.router.navigate([ruta]);
+  // ✅ Ahora acepta el fragmento ('contacto')
+  irA(ruta: string, fragment?: string) {
+    this.router.navigate([ruta], { fragment });
   }
 }

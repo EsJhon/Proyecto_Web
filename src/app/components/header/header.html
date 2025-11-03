@@ -9,7 +9,7 @@
     <div class="nav-items">
       <a href="/" routerLinkActive="active" (click)="irA('/home')">Inicio</a>
       <a href="/products" routerLinkActive="active" (click)="irA('/products')">Productos</a>
-      <a href="/contact" routerLinkActive="active" (click)="irA('/contact')">Contacto</a>
+      <a href="javascript:void(0)" (click)="irA('/', 'contacto')" routerLinkActive="active">Contacto</a>
       <a href="/cart" routerLinkActive="active" (click)="irA('/cart')">Carrito</a>
       <a href="/login" routerLinkActive="active" class="bot" (click)="irA('/login')">Iniciar Sesión</a>
     </div>

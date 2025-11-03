@@ -1,63 +1,59 @@
-/* ======== Reset y Estilos Generales ======== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-body {
+/* ======== Contenedor principal ======== */
+.login-container {
     min-height: 100vh;
-    background-color: #EADBC8; /* Beige claro */
+    background-color: #4B2E23; /* Beige Claro */
     display: flex;
-    justify-content: center; /* Centrado horizontal */
-    align-items: center;     /* Centrado vertical */
-    flex-direction: column;
-}
-
-/* ======== Contenedor principal del login ======== */
-.login {
-    width: 100%;
-    max-width: 450px;
-    display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
+    padding: 20px;
     position: relative;
-}
-
-/* ======== Imagen animada ======== */
-img {
+    width: 100%;
+  }
+  
+  /* ======== Imagen animada ======== */
+  .login-image {
     width: 100%;
     max-width: 300px;
     height: auto;
     transform: scale(0.8);
     transition: transform 0.3s ease;
-}
-
-/* ======== Formulario ======== */
-.formulario {
+    margin-bottom: 2rem;
+  }
+  
+  .login-image img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* ======== Formulario ======== */
+  .login-form {
     width: 90%;
     max-width: 400px;
-    background-color: #fff;
-    border: 3px solid #6B7A52; /* Verde olivo */
+    background-color: #4B2E23; /* Marrón Madera Oscura */
+    border: 3px solid #6B7A52; /* Verde Olivo */
     border-radius: 15px;
     padding: 2rem 2.5rem;
-    margin-top: 2rem;
     text-align: center;
     box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.25);
-}
-
-/* ======== Etiquetas e Inputs ======== */
-.formulario label {
-    color: #4B2E23; /* Marrón madera oscura */
-    font-weight: 600;
+    color: white;
+  }
+  
+  /* ======== Etiquetas e Inputs ======== */
+  .form-group {
+    margin-bottom: 1rem;
     text-align: left;
+  }
+  
+  .form-group label {
+    color: #E8D8C3; /* Color claro para mejor contraste */
+    font-weight: 600;
     display: block;
-    margin: 10px 0 5px;
+    margin: 10px 0 5px 0;
     font-size: 0.9rem;
-}
-
-.formulario input {
+  }
+  
+  .form-group input {
     width: 100%;
     height: 42px;
     border: 2px solid #6B7A52;
@@ -67,72 +63,76 @@ img {
     color: #4A4A4A;
     outline: none;
     transition: all 0.3s ease;
-}
-
-.formulario input:focus {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .form-group input:focus {
     border-color: #C9A66B;
     box-shadow: 0 0 6px #C9A66B;
-}
-
-/* ======== Botón ======== */
-.formulario button {
+    background-color: white;
+  }
+  
+  /* ======== Botón ======== */
+  .login-btn {
+    margin-left: 5%;
     margin-top: 25px;
-    width: 100%;
+    width: 380px;
     height: 45px;
     cursor: pointer;
-    background-color: #C9A66B; /* Dorado suave */
+    background-color: #C9A66B; /* Dorado Suave */
     border: none;
-    border-radius: 8px;
-    color: #fff;
+    border-radius: 6px;
+    color: #4B2E23; /* Texto marrón para contraste */
     font-size: 1rem;
     font-weight: 600;
     transition: background-color 0.3s ease, transform 0.2s ease;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
-}
-
-.formulario button:hover {
+    display: block;
+  }
+  
+  .login-btn:hover {
     background-color: #B08B55;
     transform: scale(1.03);
-}
-
-/* ======== Media Queries ======== */
-
-/* Tablets (pantallas medianas) */
-@media (max-width: 768px) {
-    img {
-        transform: scale(0.7);
+    color: white;
+  }
+  
+  /* ======== Media Queries ======== */
+  
+  /* Tablets (pantallas medianas) */
+  @media (max-width: 768px) {
+    .login-image {
+      transform: scale(0.7);
     }
-    .formulario {
-        padding: 1.8rem;
-        border-width: 2px;
+    .login-form {
+      padding: 1.8rem;
+      border-width: 2px;
     }
-}
-
-/* Móviles (pantallas pequeñas) */
-@media (max-width: 480px) {
-    body {
-        padding: 20px;
+  }
+  
+  /* Móviles (pantallas pequeñas) */
+  @media (max-width: 480px) {
+    .login-container {
+      padding: 10px;
     }
-
-    img {
-        transform: scale(0.6);
-        max-width: 200px;
+  
+    .login-image {
+      transform: scale(0.6);
+      max-width: 200px;
     }
-
-    .formulario {
-        width: 100%;
-        padding: 1.5rem;
-        margin-top: 1.5rem;
-        box-shadow: none;
-        border-radius: 12px;
+  
+    .login-form {
+      width: 100%;
+      padding: 1.5rem;
+      box-shadow: none;
+      border-radius: 12px;
     }
-
-    .formulario label {
-        font-size: 0.85rem;
+  
+    .form-group label {
+      font-size: 0.85rem;
     }
-
-    .formulario button {
-        font-size: 0.9rem;
-        height: 42px;
+  
+    .login-btn {
+      font-size: 0.9rem;
+      height: 42px;
     }
-}
+  }

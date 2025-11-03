@@ -15,8 +15,16 @@ export class Home {
 
   constructor(private router: Router) {}
 
+  // 🔹 Método original para navegar
   irA(ruta: string) {
     this.router.navigate([ruta]);
   }
 
+  // 🔹 Nuevo método para posicionarse en un id específico
+  irAId(id: string) {
+    const elemento = document.getElementById(id);
+    if (elemento) {
+      elemento.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 }

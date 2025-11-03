@@ -1,84 +1,92 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
+  standalone: true,
+  imports: [CommonModule, FormsModule],
   templateUrl: './login.html',
   styleUrls: ['./login.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
+  usuario: string = '';
+  clave: string = '';
+  currentImage: string = 'assets/images/imglg/1.png';
+  seguirPunteroMouse: boolean = true;
+  
+  private anchoMitad: number = window.innerWidth / 2;
+  private altoMitad: number = window.innerHeight / 2;
+  private animationFrameId: number | null = null;
 
-  private cajah!: HTMLImageElement;
-  private inputUsuario!: HTMLInputElement;
-  private inputClave!: HTMLInputElement;
-  private seguirPunteroMouse = true;
-  private anchoMitad = window.innerWidth / 2;
-  private altoMitad = window.innerHeight / 2;
-
-  constructor(private el: ElementRef) {}
-
-  ngOnInit(): void {
-    // Seleccionar elementos del DOM
-    this.cajah = this.el.nativeElement.querySelector('#cajah');
-    this.inputUsuario = this.el.nativeElement.querySelector('#input-usuario');
-    this.inputClave = this.el.nativeElement.querySelector('#input-clave');
-
-    // Seguir el puntero del mouse
-    document.body.addEventListener('mousemove', this.seguirMouse.bind(this));
-
-    // Configurar eventos de inputs
-    this.setupInputs();
-  }
-
-  // Función para seguir el mouse y cambiar imagen
-  seguirMouse(event: MouseEvent) {
+  @HostListener('document:mousemove', ['$event'])
+  onMouseMove(event: MouseEvent) {
     if (!this.seguirPunteroMouse) return;
 
-    if (event.clientX < this.anchoMitad && event.clientY < this.altoMitad) {
-      this.cajah.src = 'assets/images/imglg/imc/2.png';
-    } else if (event.clientX < this.anchoMitad && event.clientY > this.altoMitad) {
-      this.cajah.src = 'assets/images/imglg/imc/2.png';
-    } else if (event.clientX > this.anchoMitad && event.clientY < this.altoMitad) {
-      this.cajah.src = 'assets/images/imglg/imc/3.png';
-    } else {
-      this.cajah.src = 'assets/images/imglg/imc/3.png';
+    if (this.animationFrameId) {
+      cancelAnimationFrame(this.animationFrameId);
+    }
+
+    this.animationFrameId = requestAnimationFrame(() => {
+      if (event.clientX < this.anchoMitad && event.clientY < this.altoMitad) {
+        this.currentImage = 'assets/images/imglg/2.png';
+      } else if (event.clientX < this.anchoMitad && event.clientY > this.altoMitad) {
+        this.currentImage = 'assets/images/imglg/2.png';
+      } else if (event.clientX > this.anchoMitad && event.clientY < this.altoMitad) {
+        this.currentImage = 'assets/images/imglg/3.png';
+      } else {
+        this.currentImage = 'assets/images/imglg/3.png';
+      }
+    });
+  }
+
+  onInputFocus(inputType: string) {
+    this.seguirPunteroMouse = false;
+    
+    if (inputType === 'clave') {
+      this.animatePasswordBox('close');
     }
   }
 
-  // Configuración de eventos para los inputs
-  setupInputs() {
-    // Usuario
-    this.inputUsuario.addEventListener('focus', () => this.seguirPunteroMouse = false);
-    this.inputUsuario.addEventListener('blur', () => this.seguirPunteroMouse = true);
-    this.inputUsuario.addEventListener('keyup', () => {
-      this.cajah.src = 'assets/images/imglg/imc/4.png';
-    });
-
-    // Clave
-    this.inputClave.addEventListener('focus', () => {
-      this.seguirPunteroMouse = false;
-      let cont = 1;
-      const anim = setInterval(() => {
-        this.cajah.src = `assets/images/imglg/imc/${cont}.png`;
-        if (cont < 3) cont++;
-        else clearInterval(anim);
-      }, 60);
-    });
-
-    this.inputClave.addEventListener('blur', () => {
-      this.seguirPunteroMouse = true;
-      let cont = 2;
-      const anim = setInterval(() => {
-        this.cajah.src = `assets/images/imglg/imc/${cont}.png`;
-        if (cont > 1) cont--;
-        else clearInterval(anim);
-      }, 60);
-    });
+  onInputBlur() {
+    this.seguirPunteroMouse = true;
+    
+    if (this.clave) {
+      this.animatePasswordBox('open');
+    }
   }
 
-  // Función para manejar login
-  onLogin(event: Event) {
-    event.preventDefault();
-    // Aquí puedes agregar validaciones y redirección con Angular Router
+  onUsuarioKeyup() {
+    if (this.usuario) {
+      this.currentImage = 'assets/images/imglg/4.png';
+    }
+  }
+
+  private animatePasswordBox(action: 'open' | 'close') {
+    const frames = action === 'close' ? [1, 2, 3] : [3, 2, 1];
+    let currentFrame = 0;
+  
+    const animate = () => {
+      if (currentFrame < frames.length) {
+        // CORRECTO: usar template literal con comillas invertidas
+        this.currentImage = `assets/images/imglg/imc/${frames[currentFrame]}.png`;
+        currentFrame++;
+        setTimeout(animate, 60);
+      }
+    };
+  
+    animate();
+  }
+
+  onLogin() {
+    // Aquí podrías agregar validaciones o redirección con Angular Router
+    console.log('Login attempt:', this.usuario);
     alert('Login exitoso (demo)');
+  }
+
+  ngOnDestroy() {
+    if (this.animationFrameId) {
+      cancelAnimationFrame(this.animationFrameId);
+    }
   }
 }
