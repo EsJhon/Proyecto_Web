@@ -144,21 +144,21 @@
 
             <div class="contenedor04B">
                 <div class="contenedor04B_01">
-                    <img src="assets/images/icons/icono_005.png" alt="icono_006">
+                    <img src="assets/images/icons/icono_008.png" alt="icono_006">
                     <h3>Muebles Personalizados</h3>
                     <p>Creamos muebles únicos que se adaptan a tu estilo y necesidades, 
                         combinando estética y funcionalidad.</p>
                     <button>Más información</button>
                 </div>
                 <div class="contenedor04B_01">
-                    <img src="assets/images/icons/icono_005.png" alt="icono_006">
+                    <img src="assets/images/icons/icono_009.png" alt="icono_006">
                     <h3>Selección de Maderas</h3>
                     <p>Trabajamos con materiales sostenibles de alta calidad, 
                         garantizando acabados duraderos y elegantes.</p>
                     <button>Más información</button>
                 </div>
                 <div class="contenedor04B_01">
-                    <img src="assets/images/icons/icono_005.png" alt="icono_006">
+                    <img src="assets/images/icons/icono_010.png" alt="icono_006">
                     <h3>Carpintería para Interiores</h3>
                     <p>Fabricamos puertas, paneles y detalles en madera que 
                         realzan la armonía y elegancia de tus espacios.</p>
@@ -166,7 +166,7 @@
                 </div>
                     
                 <div class="contenedor04B_01">
-                    <img src="assets/images/icons/icono_005.png" alt="icono_006">
+                    <img src="assets/images/icons/icono_011.png" alt="icono_006">
                     <h3>Instalación de Muebles</h3>
                     <p>Montamos y colocamos tus muebles con precisión, 
                         acabado impecable en cada espacio.</p>
@@ -180,7 +180,7 @@
             <div class="contenedor05A">
                 <div id="lineaC"></div>
                 <h2>¿Por qué elegirnos?</h2>
-                <p>En Artesano Madera, combinamos tradición y modernidad para ofrecerte muebles únicos, 
+                <p class="contenedor05A_P" >En Artesano Madera, combinamos tradición y modernidad para ofrecerte muebles únicos, 
                     hechos a mano con materiales de alta calidad. Nuestro compromiso con la sostenibilidad 
                     y la atención al detalle garantizan piezas duraderas y elegantes que transforman 
                     cualquier espacio en un hogar cálido y acogedor.
@@ -194,9 +194,8 @@
                             </div>
 
                             <div>
-                                <h3>Artesanía Superior</h3>
-                                <p>Cada pieza es elaborada con precisión y dedicación, 
-                                    reflejando la maestría de nuestros artesanos.</p>
+                                <h3 class="contenedor05A_P_">Confiable</h3>
+                                <p>Garantía</p>
                             </div>
                             
                         </div>
@@ -206,9 +205,8 @@
                             </div>
 
                             <div>
-                                <h3>Materiales de Calidad</h3>
-                                <p>Utilizamos maderas seleccionadas y acabados 
-                                    que garantizan durabilidad y belleza.</p>
+                                <h3 class="contenedor05A_P_">Innovador</h3>
+                                <p>Creatividad</p>
                             </div>
                         </div>
                     </div>
@@ -216,28 +214,27 @@
                     <div class="contenedor05A_1">
                         <div class="contenedor05A_1_1">
                             <div>
-                                <img src="assets/images/icons/icono_006.png" alt="icono_006">
+                                <img src="assets/images/icons/icono_008.png" alt="icono_006">
                             </div>
 
                             <div>
-                                <h3>Artesanía Superior</h3>
-                                <p>Cada pieza es elaborada con precisión y dedicación, 
-                                    reflejando la maestría de nuestros artesanos.</p>
+                                <h3 class="contenedor05A_P_">Profesional</h3>
+                                <p>Personalización</p>
                             </div>
                             
                         </div>
                         <div class="contenedor05A_1_1">
                             <div>
-                                <img src="assets/images/icons/icono_007.png" alt="icono_007">
+                                <img src="assets/images/icons/icono_010.png" alt="icono_007">
                             </div>
 
                             <div>
-                                <h3>Materiales de Calidad</h3>
-                                <p>Utilizamos maderas seleccionadas y acabados 
-                                    que garantizan durabilidad y belleza.</p>
+                                <h3 class="contenedor05A_P_">Moderno</h3>
+                                <p>Diseño</p>
                             </div>
                         </div>
                     </div>
+
                 </div>
 
             </div>
@@ -255,45 +252,65 @@
         <div class="productos-destacados">
             <h2>Productos Destacados</h2>
             <div class="grid-productos">
-            <div class="producto-card">
-                <img src="assets/images/productos/producto_01.jpg" alt="Mesa de comedor">
-                <div class="info-producto">
-                <p><strong>Nombre:</strong> Mesa de Comedor</p>
-                <p><strong>Precio:</strong> S/147.51</p>
-                <p><strong>Descripción:</strong> Mesa de madera, diseño moderno, perfecta para tu comedor.</p>
-                <button class="btn-comprar">Comprar</button>
+                <div class="producto-card">
+                    <img src="assets/images/productos/producto_01.jpg" alt="Mesa de comedor">
+                    <div class="info-producto">
+                    <p><strong>Nombre:</strong> Mesa de Comedor</p>
+                    <p><strong>Precio:</strong> S/147.51</p>
+                    <p><strong>Descripción:</strong> Mesa de madera, diseño moderno, perfecta para tu comedor.</p>
+                    <button class="btn-comprar" (click)="irA('/productdet')">Comprar</button>
+                    </div>
                 </div>
-            </div>
 
-            <div class="producto-card">
-                <img src="assets/images/productos/producto_01.jpg" alt="Cámara de seguridad">
-                <div class="info-producto">
-                <p><strong>Nombre:</strong> DS-2CD2026G2-IU/SL</p>
-                <p><strong>Precio:</strong> S/314.00</p>
-                <p><strong>Descripción:</strong> 2MP, AcuSense, luz estroboscópica y micrófono incorporado, IP67.</p>
-                <button class="btn-comprar">Comprar</button>
+                <div class="producto-card">
+                    <img src="assets/images/productos/producto_01.jpg" alt="Cámara de seguridad">
+                    <div class="info-producto">
+                    <p><strong>Nombre:</strong> DS-2CD2026G2-IU/SL</p>
+                    <p><strong>Precio:</strong> S/314.00</p>
+                    <p><strong>Descripción:</strong> 2MP, AcuSense, luz estroboscópica y micrófono incorporado, IP67.</p>
+                    <button class="btn-comprar" (click)="irA('/productdet')">Comprar</button>
+                    </div>
                 </div>
-            </div>
 
-            <div class="producto-card">
-                <img src="assets/images/productos/producto_01.jpg" alt="Cámara de seguridad">
-                <div class="info-producto">
-                <p><strong>Nombre:</strong> DS-2CD2483G2-I</p>
-                <p><strong>Precio:</strong> S/145.34</p>
-                <p><strong>Descripción:</strong> 8MP, diseño compacto, micrófono incorporado, lente fija 2.8mm.</p>
-                <button class="btn-comprar">Comprar</button>
+                <div class="producto-card">
+                    <img src="assets/images/productos/producto_01.jpg" alt="Cámara de seguridad">
+                    <div class="info-producto">
+                    <p><strong>Nombre:</strong> DS-2CD2483G2-I</p>
+                    <p><strong>Precio:</strong> S/145.34</p>
+                    <p><strong>Descripción:</strong> 8MP, diseño compacto, micrófono incorporado, lente fija 2.8mm.</p>
+                    <button class="btn-comprar" (click)="irA('/productdet')">Comprar</button>
+                    </div>
                 </div>
-            </div>
 
-            <div class="producto-card">
-                <img src="assets/images/productos/producto_01.jpg" alt="Cámara panorámica">
-                <div class="info-producto">
-                <p><strong>Nombre:</strong> DS-2CD2366G2P-ISU</p>
-                <p><strong>Precio:</strong> S/345.35</p>
-                <p><strong>Descripción:</strong> 6MP Panorámica, micrófono y sirena incorporados, IP67.</p>
-                <button class="btn-comprar">Comprar</button>
+                <div class="producto-card">
+                    <img src="assets/images/productos/producto_01.jpg" alt="Cámara panorámica">
+                    <div class="info-producto">
+                    <p><strong>Nombre:</strong> DS-2CD2366G2P-ISU</p>
+                    <p><strong>Precio:</strong> S/345.35</p>
+                    <p><strong>Descripción:</strong> 6MP Panorámica, micrófono y sirena incorporados, IP67.</p>
+                    <button class="btn-comprar" (click)="irA('/productdet')">Comprar</button>
+                    </div>
                 </div>
-            </div>
+
+                <div class="producto-card">
+                    <img src="assets/images/productos/producto_01.jpg" alt="Cámara panorámica">
+                    <div class="info-producto">
+                    <p><strong>Nombre:</strong> DS-2CD2366G2P-ISU</p>
+                    <p><strong>Precio:</strong> S/345.35</p>
+                    <p><strong>Descripción:</strong> 6MP Panorámica, micrófono y sirena incorporados, IP67.</p>
+                    <button class="btn-comprar" (click)="irA('/productdet')">Comprar</button>
+                    </div>
+                </div>
+                <div class="producto-card">
+                    <img src="assets/images/productos/producto_01.jpg" alt="Cámara panorámica">
+                    <div class="info-producto">
+                    <p><strong>Nombre:</strong> DS-2CD2366G2P-ISU</p>
+                    <p><strong>Precio:</strong> S/345.35</p>
+                    <p><strong>Descripción:</strong> 6MP Panorámica, micrófono y sirena incorporados, IP67.</p>
+                    <button class="btn-comprar" (click)="irA('/productdet')">Comprar</button>
+
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -338,31 +355,31 @@
 
             <!-- Testimonios -->
             <div class="testimonios">
-            <h2>Testimonios</h2>
-            <p>Lo que nuestros clientes dicen de nosotros.</p>
+                <h2>Testimonios</h2>
+                <p>Lo que nuestros clientes dicen de nosotros.</p>
 
-            <div class="testimonios-contenedor">
-                <article class="testimonio">
-                <img src="assets/images/testimonios/testimonio_01.png" alt="James Pattinson">
-                <h3>James Pattinson</h3>
-                <p class="estrellas">⭐⭐⭐⭐☆</p>
-                <p>Quedé satisfecho con el servicio de la carpintería...</p>
-                </article>
+                <div class="testimonios-contenedor">
+                    <article class="testimonio">
+                        <img src="assets/images/testimonios/testimonio_01.png" alt="James Pattinson">
+                        <h3>James Pattinson</h3>
+                        <p class="estrellas">⭐⭐⭐⭐☆</p>
+                        <p>Quedé satisfecho con el servicio de la carpintería...</p>
+                    </article>
 
-                <article class="testimonio">
-                <img src="assets/images/testimonios/testimonio_01.png" alt="Greg Stuart">
-                <h3>Greg Stuart</h3>
-                <p class="estrellas">⭐⭐⭐⭐⭐</p>
-                <p>¡Excelente servicio! La carpintería se encargó de todo con mucho cuidado...</p>
-                </article>
+                    <article class="testimonio">
+                        <img src="assets/images/testimonios/testimonio_02.png" alt="Greg Stuart">
+                        <h3>Greg Stuart</h3>
+                        <p class="estrellas">⭐⭐⭐⭐⭐</p>
+                        <p>¡Excelente servicio! La carpintería se encargó de todo con mucho cuidado...</p>
+                    </article>
 
-                <article class="testimonio">
-                <img src="assets/images/testimonios/testimonio_01.png" alt="Trevor Mitchell">
-                <h3>Trevor Mitchell</h3>
-                <p class="estrellas">⭐⭐⭐☆☆</p>
-                <p>El servicio fue bueno, aunque hubo pequeños retrasos...</p>
-                </article>
-            </div>
+                    <article class="testimonio">
+                        <img src="assets/images/testimonios/testimonio_03.png" alt="Trevor Mitchell">
+                        <h3>Trevor Mitchell</h3>
+                        <p class="estrellas">⭐⭐⭐☆☆</p>
+                        <p>El servicio fue bueno, aunque hubo pequeños retrasos...</p>
+                    </article>
+                </div>
             </div>
         </div>
 

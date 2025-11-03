@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,5 +9,10 @@ import { Component } from '@angular/core';
 })
 export class Header {
   banner = 'assets/images/banners/img_001.jpg'; // 👈 define el banner para evitar el error
+  
+  constructor(private router: Router) {}
 
+  irA(ruta: string) {
+    this.router.navigate([ruta]);
+  }
 }

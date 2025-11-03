@@ -1,17 +1,17 @@
 <!-- Encabezado -->
 <header class="header-bg" [style.background-image]="'url(' + banner + ')'">
+  <div class="overlay"></div>
   <nav class="nav-links">
     <a routerLink="/" class="logo">
       <img src="assets/images/LOGO_ArtesanoMadera_Sinfondo.png" alt="Logo Artesano Madera">
     </a>
 
     <div class="nav-items">
-      <a routerLink="/" routerLinkActive="active">Inicio</a>
-      <a routerLink="/products" routerLinkActive="active">Productos</a>
-      <a routerLink="/about" routerLinkActive="active">Nosotros</a>
-      <a routerLink="/contact" routerLinkActive="active">Contacto</a>
-      <a routerLink="/cart" routerLinkActive="active">Carrito</a>
-      <a routerLink="/login" routerLinkActive="active" class="bot">Iniciar Sesión</a>
+      <a href="/" routerLinkActive="active" (click)="irA('/home')">Inicio</a>
+      <a href="/products" routerLinkActive="active" (click)="irA('/products')">Productos</a>
+      <a href="/contact" routerLinkActive="active" (click)="irA('/contact')">Contacto</a>
+      <a href="/cart" routerLinkActive="active" (click)="irA('/cart')">Carrito</a>
+      <a href="/login" routerLinkActive="active" class="bot" (click)="irA('/login')">Iniciar Sesión</a>
     </div>
   </nav>
 
@@ -22,8 +22,8 @@
     </div>
 
     <div class="botones">
-      <a routerLink="/about" class="bot01">Comprar</a>
-      <a routerLink="/products" class="bot01">Ver Productos</a>
+        <button class="bot01" (click)="irA('/cart')">Comprar</button>
+        <button class="bot01" (click)="irA('/products')">Ver Productos</button>
     </div>
   </main>
 </header>

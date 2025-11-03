@@ -51,6 +51,16 @@
     align-items: center;
     gap: 1rem;
   }
+
+  .product-info select{
+    padding: 10px 20px;
+    background-color: #C9A66B;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 20px;
+    transition: all 0.3s;
+  }
   
   .product-info img {
     width: 80px;

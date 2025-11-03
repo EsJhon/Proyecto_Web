@@ -80,12 +80,13 @@
 #btnEm{
     margin-top: 0%;
     margin-left: 59px;
-    font-size: 30px;
+    font-size: 20px;
     padding: 20px 32px;
     background-color: #C9A66B;
     color: #fff;
-    border-radius: 40px;
+    border-radius: 6px;
     text-align: center;
+    border-color: #C9A66B;
     border: none;
 }
 
@@ -129,13 +130,13 @@
 
 #nosotrosH{
     margin-left: 59px;
-    font-size: 82px;
+    font-size: 80px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
 #nosotrosP{
-    font-size: 38px;
+    font-size: 30px;
     margin-left: 59px;
     margin-right: 59px;
 }
@@ -242,11 +243,11 @@
 }
 .contenedor04A h2{
     margin-left: 59px;
-    font-size: 82px;
+    font-size: 80px;
     margin-top: 20px;
     margin-bottom: 20px;
     font-weight: bold;
-    color: #4B2E23;
+    color: #000000;
 }
 
 .contenedor04B{
@@ -279,18 +280,18 @@
     margin-top: 33px;
     border-radius: 50%;
     background-color: #e1e2de;
-    object-fit: contain;
+    object-fit: cover;
     padding: 10px;
 }
 .contenedor04B_01 h3{
-    width: 300px;
-    font-size: 35px;
-    margin-top: 10px;
+    width: 250px;
+    font-size: 30px;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 .contenedor04B_01 p{
     width: 295px;
-    font-size: 22px;
+    font-size: 24px;
     margin: 25px 20px 20px 20px;
     text-align: center;
 }
@@ -300,7 +301,7 @@
     background-color: #C9A66B;
     color: #fff;
     border: none;
-    border-radius: 50px;
+    border-radius: 6px;
     font-size: 22px;
     cursor: pointer;
     margin-bottom: 43px;
@@ -328,6 +329,22 @@
   margin-bottom: 62px;
 
 }
+.contenedor05A h2{
+  margin-top: 20px;
+  font-size: 80px;
+  margin-bottom: 0px;
+}
+
+.contenedor05A_P{
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.contenedor05A_P_{
+  font-size: 24px;
+  font-weight: normal;
+  margin-bottom: 0px;
+}
 
 .contenedor05A_1{
   width: 100%;
@@ -337,6 +354,8 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  gap: 50px;
+  margin-left: 20px;
 }
 
 .contenedor05A_1_1{
@@ -344,15 +363,27 @@
   height: auto;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: start;
+  margin-bottom: 30px;
 }
 .contenedor05A_1_1 img{
     width: 83px;
     height: 83px;
     margin-right: 10px;
+    margin-left: 0px;
 }
+
+.contenedor05A_1_1 p{
+  width: 230px;
+  font-size: 30px;
+  margin-right: 5px;
+  margin-bottom: 4px;
+  font-weight: bold;
+  margin-top: 0px;
+}
+
 .contenedor05B{
   width: 50%;
   height: 800px;
@@ -365,7 +396,6 @@
 
 /* 🎨 Sección de Productos Destacados */
 .productos-destacados {
-background-color: #d7c3a5;
 padding: 60px 40px;
 border-radius: 16px;
 width: 90%;
@@ -375,15 +405,16 @@ text-align: center;
 }
 
 .productos-destacados h2 {
-font-size: 2.2rem;
-color: #4b2e18;
+font-size: 80px;
+color: #000000;
 margin-bottom: 40px;
 font-weight: 700;
 }
 
 .grid-productos {
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+height: 800px;
 gap: 30px;
 justify-content: center;
 }
@@ -422,8 +453,9 @@ width: 100%;
 
 .info-producto p {
 margin: 6px 0;
-font-size: 0.95rem;
+font-size: 24px;
 color: #333;
+margin-bottom: 11px;
 }
 
 .info-producto strong {
@@ -432,19 +464,20 @@ color: #000;
 
 .btn-comprar {
 display: inline-block;
-background-color: #42a942;
+background-color: #C9A66B;
+font-size: 20px;
 color: #fff;
 padding: 8px 18px;
 border: none;
 border-radius: 6px;
-font-weight: 600;
+font-weight: normal;
 cursor: pointer;
 margin-top: 8px;
 transition: background-color 0.3s ease;
 }
 
 .btn-comprar:hover {
-background-color: #358b35;
+background-color: #c79a4d;
 }
 
 /* 📱 Responsive Productos */
@@ -477,14 +510,15 @@ box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .contacto h2 {
-font-size: 2rem;
+font-size: 80px;
 font-weight: 700;
-color: #1a1a1a;
+color: #000000;
 margin-bottom: 10px;
+margin-top: 10px;
 }
 
 .contacto p {
-font-size: 0.95rem;
+font-size: 24px;
 text-align: center;
 color: #444;
 margin-bottom: 40px;
@@ -511,7 +545,7 @@ gap: 15px;
 padding: 12px;
 border: 1px solid #ccc;
 border-radius: 6px;
-font-size: 0.95rem;
+font-size: 18px;
 }
 
 .form-contacto button {
@@ -553,7 +587,6 @@ gap: 5px;
 
 /* 🟤 Sección TESTIMONIOS */
 .testimonios {
-background: linear-gradient(to bottom, #e8dcc7, #f4efe8);
 border-radius: 16px;
 padding: 60px 40px;
 width: 90%;
@@ -563,14 +596,15 @@ text-align: center;
 }
 
 .testimonios h2 {
-font-size: 1.8rem;
-color: #5a3d2e;
+font-size: 80px;
+margin-top: 10px;
+color: #000000;
 margin-bottom: 10px;
 }
 
 .testimonios p {
-font-size: 1rem;
-color: #3b2e25;
+font-size: 30px;
+color: #000000;
 margin-bottom: 40px;
 }
 
@@ -606,7 +640,7 @@ margin-bottom: 15px;
 }
 
 .testimonio h3 {
-font-size: 1.1rem;
+font-size: 30px;
 font-weight: 600;
 color: #3a2a1c;
 }
@@ -619,7 +653,7 @@ margin: 5px 0;
 
 .testimonio p {
 color: #444;
-font-size: 0.95rem;
+font-size: 24px;
 margin-top: 10px;
 }
 

@@ -19,23 +19,25 @@
   }
   
   .footer-logo {
-    width: 130px;
-    height: auto;
+    width: 90px;
+    height: 90px;
+
     margin-right: 20px;
   }
   
   .footer-logo-text{
     display: flex;
     flex-direction: row;
+    gap: 400px;
   }
 
   .footer-logo-text p {
     color: #cfcfcf;
-    max-width: 800px;
-    font-size: 15px;
+    width: auto;
+    font-size: 20px;
     line-height: 1.7;
     text-align: left;
-    margin-left: 600px;
+
   }
   
   .footer-divider {
@@ -53,7 +55,7 @@
   
   .footer-column h3 {
     color: #ffffff;
-    font-size: 18px;
+    font-size: 24px;
     margin-bottom: 15px;
   }
   
@@ -64,6 +66,7 @@
   
   .footer-column ul li {
     margin-bottom: 8px;
+    font-size: 20px;
   }
   
   .footer-column a {
@@ -77,8 +80,9 @@
   }
   
   .newsletter p {
+    width: 700px;
     color: #bfbfbf;
-    font-size: 14px;
+    font-size: 20px;
     margin-bottom: 10px;
   }
   
@@ -93,16 +97,17 @@
     border-radius: 30px;
     border: none;
     outline: none;
-    font-size: 14px;
+    font-size: 20px;
     color: #333;
   }
   
   .newsletter button {
     width: 170px;
     background-color: #c9a66b;
+    font-size: 20px;
     border: none;
     padding: 12px 20px;
-    border-radius: 25px;
+    border-radius: 6px;
     color: #fff;
     font-weight: 600;
     cursor: pointer;
@@ -120,10 +125,15 @@
     align-items: center;
     flex-wrap: wrap;
     padding-top: 15px;
-    font-size: 14px;
     color: #999;
   }
+
+  .footer-bottom p{
+   font-size: 20px;
+   width: 500px;
+  }
   
+
   .footer-socials a {
     color: #c9a66b;
     font-size: 18px;

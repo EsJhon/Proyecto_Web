@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Header } from '../header/header'; 
 import { Footer } from '../footer/footer'; 
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -11,4 +12,11 @@ import { Footer } from '../footer/footer';
 })
 export class Home {
   public banner = 'assets/images/banners/img_001.jpg';
+
+  constructor(private router: Router) {}
+
+  irA(ruta: string) {
+    this.router.navigate([ruta]);
+  }
+
 }
